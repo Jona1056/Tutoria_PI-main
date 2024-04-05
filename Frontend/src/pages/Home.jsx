@@ -104,7 +104,7 @@ const Home = () => {
               <p key={i}>{comentario}</p>
             ))}
             <textarea
-              value={nuevoComentario}
+              value={nuevoComentario[100] }
               onChange={(e) => setNuevoComentario(e.target.value)}
             ></textarea>
             <button className="comment-button" onClick={() => agregarComentario(index)}>

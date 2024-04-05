@@ -1,20 +1,28 @@
 import { useState } from 'react';
-
+import { useNavigate } from "react-router-dom";
 import "./styles/agregarpublicacion.css";
 // eslint-disable-next-line react/prop-types
 const AgregarPublicacion = () => {
     const [descripcion, setDescripcion] = useState('');
     const [categoria, setCategoria] = useState('');
-
-    const handleSubmit = (e) => {
+    const navigate = useNavigate();
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Aquí puedes realizar validaciones si es necesario
-        //hacer peticion y mandar los datos
+        //peticion
+        const publicacion = { descripcion, categoria };
+        const response = await fetch('http://localhost:3000/publicaciones', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(publicacion),
+        });
+        console.log(response)
 
 
 
         // Redirige a la página de inicio después de agregar la publicación
-        history.push('/');
+        navigate("/home");
     };
 
     return (

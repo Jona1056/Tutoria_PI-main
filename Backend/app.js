@@ -125,3 +125,11 @@ app.post('/comentarios/:index', function(req, res) {
   // Enviar una respuesta JSON con el número actualizado de comentarios
   res.json({ comentarios: listaPublicaciones[index].comentarios });
 });
+
+// Ruta para crear una nueva publicación
+app.post("/publicaciones", (req, res) => {
+  const { descripcion, categoria } = req.body;
+  const nuevaPublicacion = new Publicacion(descripcion, categoria);
+  listaPublicaciones.push(nuevaPublicacion);
+  res.status(201).send("Publicación creada exitosamente");
+});
