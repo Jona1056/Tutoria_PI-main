@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import "./styles/agregarpublicacion.css";
 // eslint-disable-next-line react/prop-types
-const AgregarPublicacion = ({ onFormSubmit }) => {
+const AgregarPublicacion = () => {
     const [descripcion, setDescripcion] = useState('');
     const [categoria, setCategoria] = useState('');
 
@@ -10,9 +10,7 @@ const AgregarPublicacion = ({ onFormSubmit }) => {
         e.preventDefault();
         // Aquí puedes realizar validaciones si es necesario
         //hacer peticion y mandar los datos
-        
-        // Envía los datos al componente padre
-        onFormSubmit({ descripcion, categoria });
+
 
 
         // Redirige a la página de inicio después de agregar la publicación
