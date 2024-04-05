@@ -1,0 +1,168 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input, select {
+    margin-bottom: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.publicacion {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.publicacion h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.publicacion p {
+    margin: 0;
+    color: #666;
+}
+
+.Btn {
+    width: 140px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089);
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  .leftContainer {
+    width: 60%;
+    height: 100%;
+    background-color: rgb(147, 182, 242);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .leftContainer .like {
+    color: white;
+    font-weight: 600;
+  }
+  
+  .likeCount {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(53, 5, 142, 0.331);
+    font-weight: 600;
+    position: relative;
+    background-color: rgb(171, 171, 202);
+  }
+  
+  .likeCount::before {
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    content: "";
+    background-color: rgb(255, 255, 255);
+    transform: rotate(45deg);
+    left: -4px;
+  }
+  
+  .Btn:hover .leftContainer {
+    background-color: rgb(67, 93, 244);
+  }
+  
+  .Btn:active .leftContainer {
+    background-color: rgb(96, 147, 240);
+  }
+  
+  .Btn:active .leftContainer svg {
+    transform: scale(1.15);
+    transform-origin: top;
+  }
+  
+  .link-button {
+    text-decoration: none;
+  }
+  
+  .button1 {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .button1:hover {
+    background-color: #0056b3;
+  }
+  
+  .button1:focus {
+    outline: none;
+  }
+  
+  /* En tu archivo de estilos CSS */
+
+/* En tu archivo styles/Home.css */
+
+/* Estilo para el textarea de los comentarios */
+textarea {
+    width: 100%;
+    height: 100px; /* Altura ajustable según tus necesidades */
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Permite redimensionar verticalmente */
+  }
+  
+  /* Estilo para el botón de agregar comentario */
+  .comment-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .comment-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .comment-button:focus {
+    outline: none;
+  }
+  
